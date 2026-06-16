@@ -230,7 +230,7 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 }
 
 .main .buttons .filter {
-    padding: 0 12px;
+    padding: 12px;
     height: 45px;
     background-color: var(--bg-secundary);
     display: flex;
@@ -245,7 +245,7 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 }
 
 .main .buttons .exports {
-    padding: 0 12px;
+    padding: 12px;
     height: 45px;
     background-color: var(--bg-secundary);
     display: flex;
@@ -262,7 +262,6 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 .main .box {
     background-color: var(--bg-secundary);
     border-radius: 8px;
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -280,7 +279,6 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
     line-height: 1.4rem;
     padding: 12px;
     align-items: center;
-    flex-grow: 1;
 }
 
 .main .box .box-main h2 {
@@ -291,7 +289,6 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 .main .box .box-main h4 {
     padding: 5px;
     font-size: 0.78rem;
-    white-space: nowrap;
 }
 
 .main .box .box-footer {
@@ -323,7 +320,6 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 .main .big-box .big-box-header .month {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .main .big-box .big-box-header .month .material-icons {
@@ -365,7 +361,6 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
 .main .big-box .big-box-footer img {
     width: 100%;
     height: auto;
-    object-fit: contain;
 }
     /* ==========================================================================
     XXXXXXXXXXXXXXXX      CELULAR (Largura < 600px)   XXXXXXXXXXXXXXXXXXXXXXX
@@ -377,7 +372,7 @@ body {
     background-color: var(--bg-primary);
 
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
     grid-template-areas: 
         "header"
         "main";
@@ -432,7 +427,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxxx
 .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr, 1fr;
     padding: 15px;
     gap: 15px;
     width: 100%;
@@ -491,11 +486,10 @@ xxxxxxxxxxxxxxxxxxxxxxx Sidebar xxxxxxxxxxxxxxxxxxxxxx
     
     body {
         display: grid;
-        max-width: 100%; 
         font-family: 'Inter', sans-serif;
         background-color: var(--bg-primary);
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "header"
             "main"
             "footer";
@@ -527,8 +521,6 @@ xxxxxxxxxxxxxxxxxxxxxxxx Header xxxxxxxxxxxxxxxxxxxxxxxx
     align-items: center;
     gap: 10px;
     width: 40%;
-    padding-bottom: 0;
-    border-bottom: none;
 }
 
 .header .search-box input {
@@ -552,15 +544,10 @@ xxxxxxxxxxxxxxxxxxxxxxxx Header xxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
 ======================================================*/
 
-
 .main {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
-    gap: 20px;
-    width: 100%;
-
 }
 
 .main .main-title {
@@ -573,10 +560,6 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
     grid-row: 1;
     display: flex;
     justify-content: flex-end;
-}
-
-.main .box {
-    grid-column: span 1; 
 }
 
 .main .box1 {
@@ -604,11 +587,6 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
     grid-row: span 2;
 }
 
-.main .big-box .big-box-main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .main .big-box .big-box-main h1 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -627,13 +605,12 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    padding: 20px;
+    padding: 15px;
     gap: 20px;
-    width: 100%;
 }
 
 .footer .customers {
-    grid-column: span 5;
+    grid-column: span 6;
     min-width: 600px;
     background-color: var(--bg-secundary);
     border-radius: 8px;
@@ -664,8 +641,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 }
 
 .footer .customers .activity-table {
-    width: 100%;
-    border-collapse: collapse;
     margin-top: 25px;
     text-align: left;
 }
@@ -683,6 +658,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
     padding: 15px 0;
     vertical-align: middle;
     font-size: 0.85rem;
+    border-bottom: 1px solid var(--margin-top);
 }
 
 
@@ -704,16 +680,11 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
     flex-direction: column;
 }
 
-.footer .customers .activity-table .member-background {
-    display: flex;
-}
-
 .footer .traffic {
     grid-column: auto;
     display: flex;
-    min-width: 260px;
+    min-width: 300px;
     flex-wrap: wrap;
-    min-width: none;
     background-color: var(--bg-secundary);
     border-radius: 8px;
     padding-top: 20px;
@@ -721,14 +692,19 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 
 .footer .traffic .traffic-header {
     display: flex;
-    justify-content: space-around;
+    padding-left: 15px;
+    align-items: center;
+}
+
+
+.footer .traffic .traffic-button {
+    margin-left: 40px;
 }
 
 .footer .traffic .traffic-main img {
     width: 100%;
     height: auto;
     margin-top: 20px;
-    object-fit: contain;
 }
 
 }
@@ -740,7 +716,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
    @media (min-width: 1024px) {
 body {
     display: grid;
-    max-width: 100%; 
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
     grid-template-columns: 260px 1fr; 
@@ -758,7 +733,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Sidebar xxxxxxxxxxxxxxxxxxxxxx
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     padding: 20px;
     background-color: var(--bg-secundary);
 
