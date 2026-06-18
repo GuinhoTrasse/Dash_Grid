@@ -417,7 +417,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Header xxxxxxxxxxxxxxxxxxxxxxxx
 .header .search-box input {
     background-color: transparent;
     border: none;
-    width: 100%;
 }
 
 /*====================================================
@@ -430,7 +429,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxxx
     grid-template-columns: 1fr, 1fr;
     padding: 15px;
     gap: 15px;
-    width: 100%;
 }
 
 .main .main-title {
@@ -451,7 +449,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxxx
 
 .main .big-box {
     grid-column: 2 span;
-    grid-row: auto;
     background-color: var(--bg-secundary);
     border-radius: 8px;
 }
@@ -552,7 +549,7 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
 
 .main .main-title {
     grid-column: span 2;
-    align-self: center;
+    grid-row: 1;
 }
 
 .main .buttons {
@@ -560,6 +557,8 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
     grid-row: 1;
     display: flex;
     justify-content: flex-end;
+
+
 }
 
 .main .box1 {
@@ -599,7 +598,6 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
 /*====================================================
 xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 ======================================================*/
-
 
 .footer {
     grid-area: footer;
@@ -656,7 +654,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 
 .activity-table td {
     padding: 15px 0;
-    vertical-align: middle;
     font-size: 0.85rem;
     border-bottom: 1px solid var(--margin-top);
 }
@@ -672,7 +669,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .customer-info {
@@ -681,7 +677,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 }
 
 .footer .traffic {
-    grid-column: auto;
+    grid-column: span 2;
     display: flex;
     min-width: 300px;
     flex-wrap: wrap;
@@ -704,7 +700,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 .footer .traffic .traffic-main img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 }
