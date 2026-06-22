@@ -45,9 +45,9 @@
         </div>
 
         
-        <div class="options selected">
-            <span class="material-icons white">home</span>
-            <h4 class="white">Dashboard</h4>
+        <div class="options">
+            <span class="material-icons gray">home</span>
+            <h4 class="gray">Dashboard</h4>
         </div>
         <div class="options">
             <span class="material-icons gray">shopping_bag</span>
@@ -73,8 +73,8 @@
             <span class="material-icons gray">bar_chart</span>
             <h4 class="gray">Statics</h4>
         </div>
-        <div class="options margin-bottom"></div>
-        <div class="options"></div>
+        <div class="no-options margin-bottom"></div>
+        <div class="no-options"></div>
         <div class="options">
             <span class="material-icons gray">settings</span>
             <h4 class="gray">Settings</h4>
@@ -91,6 +91,7 @@
         </div>
         
     </aside>
+
     <main class="main">
         <div class="main-title">
             <h1 class="white">Dashboard</h1>
@@ -212,6 +213,7 @@
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="customers">
             <div class="customer-header">
@@ -224,81 +226,77 @@
                 </div>
             </div>
         
-            <table class="activity-table">
+           <div class="table">
+                <div class="table-header margin-bottom">
+                    <div class="th gray">Customer</div>
+                    <div class="th gray">Status</div>
+                    <div class="th gray">Custumer ID</div>
+                    <div class="th gray">Retained</div>
+                    <div class="th gray end">Amount</div>
+                </div>
 
-                <thead>
-                    <tr>
-                        <th>Customer</th>
-                        <th>Status</th>
-                        <th>Customer ID</th>
-                        <th>Retained</th>
-                        <th class="end">Amount</th>
-                    </tr>
-                </thead>
+                <div class="table-main margin-bottom">
+                    <div class="table-td">
+                        <div class="customer-profile">
+                            <img src="imagens/01-perfil.jpg" alt="Ronald">
+                            <div class="customer-info">
+                                <h4 class="white">Ronald Richards</h4>
+                                <h4 class="gray">ronalrcs@mail.com</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-td">
+                        <div class="status-cinza">
+                            <h4 class="gray">Member</h4>
+                        </div>
+                    </div>
+                    <div class="table-td"><h4 class="white">#74568320</h4></div>
+                    <div class="table-td"><h4 class="white">5 min ago</h4></div>
+                    <div class="table-td end"><h4 class="white">$12,408.20</h4></div> 
+                </div>
 
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="customer-profile">
-                                <img src="imagens/01-perfil.jpg" alt="Ronald">
-                                <div class="customer-info">
-                                    <h4 class="white">Ronald Richards</h4>
-                                    <h4 class="gray">ronalrcs@mail.com</h4>
-                                </div>
+                <div class="table-main margin-bottom">
+                    <div class="table-td">
+                        <div class="customer-profile">
+                            <img src="imagens/02-perfil.jpg" alt="Darrel">
+                            <div class="customer-info">
+                                <h4 class="white">Darrell Steward</h4>
+                                <h4 class="gray">steward.darell@mail.com</h4>
                             </div>
-                        </td>
-                        <td>
-                            <div class="member-background status-cinza">
-                                <h4 class="gray">Member</h4>
-                            </div>
-                        </td>
-                        <td><h4 class="white">#74568320</h4></td>
-                        <td><h4 class="white">5 min ago</h4></td>
-                        <td><h4 class="white end">$12,408.20</h4></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <div class="customer-profile">
-                                <img src="imagens/02-perfil.jpg" alt="Darrell">
-                                <div class="customer-info">
-                                    <h4 class="white">Darrell Steward</h4>
-                                    <h4 class="gray">steward.darell@mail.com</h4>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="member-background status-laranja">
-                                <h4 class="orange">Signed Up</h4>
-                            </div>
-                        </td>
-                        <td><h4 class="white">#23134855</h4></td>
-                        <td><h4 class="white">10 min ago</h4></td>
-                        <td><h4 class="white end">$201.50</h4></td>
-                    </tr>
+                        </div>
+                    </div>
+                    <div class="table-td">
+                        <div class="status-laranja">
+                            <h4 class="orange">Signed Up</h4>
+                        </div>
+                    </div>
+                    <div class="table-td"><h4 class="white">#23134855</h4></div>
+                    <div class="table-td"><h4 class="white">10 min ago</h4></div>
+                    <div class="table-td end"><h4 class="white">$201.50</h4></div> 
+                </div>
 
-                    <tr>
-                        <td>
-                            <div class="customer-profile">
-                                <img src="imagens/03-perfil.jpg" alt="Darrell">
-                                <div class="customer-info">
-                                    <h4 class="white">Marvin McKinney</h4>
-                                    <h4 class="gray">mckinney.jr@mail.com</h4>
-                                </div>
+                <div class="table-main">
+                    <div class="table-td">
+                        <div class="customer-profile">
+                            <img src="imagens/03-perfil.jpg" alt="Marvin">
+                            <div class="customer-info">
+                                <h4 class="white">Marvin McKinney</h4>
+                                <h4 class="gray">mckinney.jr@mail.com</h4>
                             </div>
-                        </td>
-                        <td>
-                            <div class="member-background status-verde">
-                                <h4 class="green">New Custumer</h4>
-                            </div>
-                        </td>
-                        <td><h4 class="white">#54394837</h4></td>
-                        <td><h4 class="white">15 min ago</h4></td>
-                        <td><h4 class="white end">$2.856,03</h4></td>
-                    </tr>
-                </tbody>
-                
-            </table>
+                        </div>
+                    </div>
+                    <div class="table-td">
+                        <div class="status-verde">
+                            <h4 class="green">New Customer</h4>
+                        </div>
+                    </div>
+                    <div class="table-td"><h4 class="white">#54394837</h4></div>
+                    <div class="table-td"><h4 class="white">15 min ago</h4></div>
+                    <div class="table-td end"><h4 class="white">$2.856,03</h4></div> 
+                </div>
+
+           </div>
+
         </div>
 
         <div class="traffic">

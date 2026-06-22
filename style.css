@@ -200,16 +200,6 @@ xxxxxxxxxxxxxxxxxxxxx ícones roxo xxxxxxxxxxxxxxxxxxxxx
     border-radius: 50%;
 }
 
-/*====================================================
-xxxxxxxxxxxxxxxx ícone selecionado xxxxxxxxxxxxxxxxxxx
-======================================================*/
-
-.selected {
-    background-color: var(--selected);
-    border-radius: 8px;
-}
-
-
 
 /*====================================================
 xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
@@ -278,6 +268,7 @@ xxxxxxxxxxxxxxxxxxx Medidas gerais xxxxxxxxxxxxxxxxxxx
     flex-wrap: wrap;
     line-height: 1.4rem;
     padding: 12px;
+    margin-top: auto;
     align-items: center;
 }
 
@@ -419,6 +410,9 @@ xxxxxxxxxxxxxxxxxxxxxxx Header xxxxxxxxxxxxxxxxxxxxxxxx
     border: none;
 }
 
+
+
+
 /*====================================================
 xxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxxx
 ======================================================*/
@@ -426,7 +420,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxxx
 .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 15px;
     gap: 15px;
 }
@@ -557,8 +551,6 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
     grid-row: 1;
     display: flex;
     justify-content: flex-end;
-
-
 }
 
 .main .box1 {
@@ -586,6 +578,11 @@ xxxxxxxxxxxxxxxxxxxxxxxx Main xxxxxxxxxxxxxxxxxxxxxxxx
     grid-row: span 2;
 }
 
+.big-box-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .main .big-box .big-box-main h1 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -609,7 +606,6 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 
 .footer .customers {
     grid-column: span 6;
-    min-width: 600px;
     background-color: var(--bg-secundary);
     border-radius: 8px;
     padding: 20px;
@@ -638,26 +634,31 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
     margin-left: 8px;
 }
 
-.footer .customers .activity-table {
+.table {
+    display: flex;
+    flex-direction: column;
     margin-top: 25px;
-    text-align: left;
 }
 
+.table-header, .table-main {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+}
 
-.activity-table th {
-    color: var(--icon-gray);
-    font-size: 0.85rem;
-    font-weight: 400;
+.table-header {
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--margin-top);
 }
 
-.activity-table td {
-    padding: 15px 0;
-    font-size: 0.85rem;
-    border-bottom: 1px solid var(--margin-top);
+.table-main {
+    padding-top: 15px;
 }
 
+.table-td {
+    display: flex;
+    align-items: center;
+}
 
 .customer-profile {
     display: flex;
@@ -679,8 +680,8 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 .footer .traffic {
     grid-column: span 2;
     display: flex;
-    min-width: 300px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: var(--bg-secundary);
     border-radius: 8px;
     padding-top: 20px;
@@ -688,21 +689,55 @@ xxxxxxxxxxxxxxxxxxxxxxx Footer xxxxxxxxxxxxxxxxxxxxxxx
 
 .footer .traffic .traffic-header {
     display: flex;
-    padding-left: 15px;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
 
 
 .footer .traffic .traffic-button {
-    margin-left: 40px;
+    margin-right: 10px;
 }
 
 .footer .traffic .traffic-main img {
     width: 100%;
-    height: auto;
     padding-top: 20px;
 }
 
+}
+
+/*  ==========================================================================
+    XXXXXXXXXXXXXXX   FOOTER DO TABLET (600px a 850px)   XXXXXXXXXXXXXXXXXXXXXX
+    ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 850px) {
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    .footer .customers {
+        grid-column: 1;
+    }
+
+    .footer .table-td {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer .traffic {
+        grid-column: 1;
+        padding: 20px;
+    }
+
+    .table-main {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+        padding: 20px 0;
+    }
 }
 
 /*  ==========================================================================
@@ -714,7 +749,7 @@ body {
     display: grid;
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
-    grid-template-columns: 260px 1fr; 
+    grid-template-columns: 200px 1fr; 
     grid-template-areas: 
         "sidebar header"
         "sidebar main"
@@ -729,7 +764,7 @@ xxxxxxxxxxxxxxxxxxxxxxx Sidebar xxxxxxxxxxxxxxxxxxxxxx
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     padding: 20px;
     background-color: var(--bg-secundary);
 
@@ -762,9 +797,14 @@ xxxxxxxxxxxxxxxxxxxxxxx Sidebar xxxxxxxxxxxxxxxxxxxxxx
 
 .sidebar .options {
     height: 40px;
+    cursor: pointer;
     padding-left: 10px;
     display: flex;
     align-items: center;
+}
+
+.sidebar .no-options {
+    height: 40px;
 }
 
 .sidebar .options h4 {
@@ -784,4 +824,18 @@ xxxxxxxxxxxxxxxxxxxxxxx Sidebar xxxxxxxxxxxxxxxxxxxxxx
     margin-right: 30px;
 }
 
+}
+
+/*====================================================
+xxxxxxxxxxxxxxxxxxxxxxx Hover xxxxxxxxxxxxxxxxxxxxxxxx
+======================================================*/
+
+.sidebar .options:hover {
+    background-color: var(--selected);
+    border-radius: 8px;
+}
+
+.sidebar .options:hover .material-icons,
+.sidebar .options:hover h4 {
+    color: var(--icon-white);
 }
